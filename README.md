@@ -1,1 +1,1 @@
-Learning GO
+Learning GO (OTUS)
