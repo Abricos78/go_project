@@ -1,14 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
 
 func main() {
-	const tableSize = 8
+	tableSize, error := strconv.ParseUint(os.Args[0], 10, 64)
+
+	if error != nil {
+		fmt.Println(error)
+		return
+	}
 
 	result := ""
 
-	for i := 0; i < tableSize; i++ {
-		for j := 0; j < tableSize; j++ {
+	var i uint64
+	for i = 0; i < tableSize; i++ {
+
+		var j uint64
+		for j = 0; j < tableSize; j++ {
 			if i%2 == 0 {
 				if j%2 == 0 {
 					result += " "
