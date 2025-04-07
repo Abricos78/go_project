@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	tableSize, error := strconv.ParseUint(os.Args[0], 10, 64)
+	tableSize, error := strconv.ParseUint(os.Args[1], 10, 64)
 
 	if error != nil {
 		fmt.Println(error)
